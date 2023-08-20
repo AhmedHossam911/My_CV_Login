@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login To See My CV 😉❤</h1>
+        <form action="#" method="post" id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <br>
+            
+            <a href="#" id="forgotPasswordLink" style="font-size: larger; text-decoration: none;">أضغط عليا</a>
+
+            <br>
+            
+            <button type="submit">Login</button>
+        </form>
+        
+        <p>&copy; Made By Ahmed Hossam</p>
+    </div>
+
+    <script>
+        const forgotPasswordLink = document.getElementById("forgotPasswordLink");
+        const loginForm = document.getElementById("loginForm");
+
+        forgotPasswordLink.addEventListener("click", function(event) {
+            event.preventDefault();
+            const message = 'حتي انت يا صاحبي ماشي 😂😂 Username "Ahmed" Password "CV"';
+            alert(message);
+        });
+
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "Ahmed" && password === "CV") {
+                window.location.href = "https://ahmedhossam911.github.io/My_CV/";
+            } else {
+                alert("Invalid username or password.");
+            }
+        });
+    </script>
+</body>
+</html>
